@@ -1,0 +1,186 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <title>
+        {% block titulo %}
+
+        {% endblock %}
+    </title>
+    <link rel="shortcut icon" href="{% static 'base/images/favicon.ico' %}" type="image/x-icon">
+    <link rel="icon" href="{% static 'base/images/favicon.ico' %}" type="image/x-icon">
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+
+    <link href="https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800&display=swap"
+          rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Amatic+SC:400,700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="{% static 'base/css/open-iconic-bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'base/css/animate.css' %}">
+
+    <link rel="stylesheet" href="{% static 'base/css/owl.carousel.min.css' %}">
+    <link rel="stylesheet" href="{% static 'base/css/owl.theme.default.min.css' %}">
+    <link rel="stylesheet" href="{% static 'base/css/magnific-popup.css' %}">
+
+    <link rel="stylesheet" href="{% static 'base/css/aos.css' %}">
+
+    <link rel="stylesheet" href="{% static 'base/css/ionicons.min.css' %}">
+
+    <link rel="stylesheet" href="{% static 'base/css/bootstrap-datepicker.css' %}">
+    <link rel="stylesheet" href="{% static 'base/css/jquery.timepicker.css' %}">
+
+
+    <link rel="stylesheet" href="{% static 'base/css/flaticon.css' %}">
+    <link rel="stylesheet" href="{% static 'base/css/icomoon.css' %}">
+    <link rel="stylesheet" href="{% static 'base/css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'base/css/propio.css' %}">
+    <link href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.0.3/css/font-awesome.css'>
+</head>
+
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
+    <div class="container">
+        <a href="{% url 'generales:home' %}"><img alt="logo" id="logo"
+                                                  src="{% static 'base/images/logo.jpg' %}"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav"
+                aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation" id="text-nav">
+            <span class="oi oi-menu" id="text-nav"></span> Menú
+        </button>
+
+        <div class="collapse navbar-collapse" id="ftco-nav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item" id="hovermenu"><a href="{% url 'generales:home' %}"
+                                                       class="nav-link">Inicio</a>
+                </li>
+                <li class="nav-item" id="hovermenu"><a href="{% url 'generales:nosotros' %}"
+                                                       class="nav-link">Nosotros</a></li>
+                <li class="nav-item" id="hovermenu"><a href="{% url 'generales:convenios' %}"
+                                                       class="nav-link">Convenios & Promociones</a></li>
+                <li class="nav-item" id="hovermenu"><a href="{% url 'generales:contacto' %}"
+                                                       class="nav-link">Contacto</a></li>
+                <li class="nav-item" id="hovermenu"><a href="{% url 'generales:servicios' %}"
+                                                       class="nav-link">Servicios</a></li>
+                <li class="nav-item" id="hovermenu"><a href="{% url 'generales:proceso_reserva' %}"
+                                                       class="nav-link">Reserva</a></li>
+                <li class="nav-item" id="hovermenu"><a href="{% url 'perfil:perfil' %}"
+                                                       class="nav-link">
+                    {% if user.is_authenticated %}
+                        ¡Bienvenido {{ user.usuario.nombre }}!
+                    {% else %}
+                        Iniciar sesión
+                        </a></li>
+                    {% endif %}
+            </ul>
+        </div>
+    </div>
+</nav>
+<!-- END nav -->
+
+{% block content %}
+
+{% endblock %}
+
+<footer class="ftco-footer ftco-section">
+
+    <div class="container" id="footer" style="display:block;">
+        <div class="row">
+            <div class="mouse">
+                <a href="#" class="mouse-icon" id="footer" style="display:block;">
+                    <div class="mouse-wheel"><span class="ion-ios-arrow-up"></span></div>
+                </a>
+            </div>
+        </div>
+        <div class="row mb-5">
+            <div class="col-md">
+                <div class="ftco-footer-widget mb-4">
+                    <h2 class="ftco-heading-2">Linda Sonrisa</h2>
+                    <p>¡Encuéntranos en nuestras redes sociales!</p>
+                    <ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-5">
+                        <li class="ftco-animate"><a href="#"><span class="icon-twitter"></span></a></li>
+                        <li class="ftco-animate"><a href="#"><span class="icon-facebook"></span></a></li>
+                        <li class="ftco-animate"><a href="#"><span class="icon-instagram"></span></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md">
+                <div class="ftco-footer-widget mb-4">
+                    <h2 class="ftco-heading-2">¿Tienes alguna pregunta?</h2>
+                    <div class="block-23 mb-3">
+                        <ul>
+                            <li><a href="https://g.page/OdontologiaCordilleraPuente?share" target="_blank"><span
+                                    class="icon icon-map-marker"></span><span class="text">Av. Concha Y Toro
+                                                2279, Puente Alto, Región Metropolitana</span></a>
+                            </li>
+                            <li><a href="tel://600 500 4582"><span class="icon icon-phone"></span><span
+                                    class="text">600 500 4582</span></a></li>
+                            <li><a href="mailto:info@lindasonrisa.cl"><span
+                                    class="icon icon-envelope"></span><span
+                                    class="text">info@lindasonrisa.cl</span></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12 text-center">
+
+                <p>
+                    <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                    Copyright &copy;
+                    <script>document.write(new Date().getFullYear());</script>
+                    | Linda Sonrisa
+                    <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- loader -->
+<div id="ftco-loader" class="show fullscreen">
+    <svg class="circular" width="48px" height="48px">
+        <circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/>
+        <circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10"
+                stroke="#3fabad"/>
+    </svg>
+</div>
+
+
+<script src="{% static 'base/js/jquery.min.js' %}"></script>
+<script src="{% static 'base/js/jquery-migrate-3.0.1.min.js' %}"></script>
+<script src="{% static 'base/js/popper.min.js' %}"></script>
+<script src="{% static 'base/js/bootstrap.min.js' %}"></script>
+<script src="{% static 'base/js/jquery.easing.1.3.js' %}"></script>
+<script src="{% static 'base/js/jquery.waypoints.min.js' %}"></script>
+<script src="{% static 'base/js/jquery.stellar.min.js' %}"></script>
+<script src="{% static 'base/js/owl.carousel.min.js' %}"></script>
+<script src="{% static 'base/js/jquery.magnific-popup.min.js' %}"></script>
+<script src="{% static 'base/js/aos.js' %}"></script>
+<script src="{% static 'base/js/jquery.animateNumber.min.js' %}"></script>
+<script src="{% static 'base/js/bootstrap-datepicker.js' %}"></script>
+<script src="{% static 'base/js/scrollax.min.js' %}"></script>
+<!--<script
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyADn53DrFhYk_kt2YJzYZXMLFtBaN3jjrA"></script>
+    <script src="{% static 'base/js/google-map.js' %}"></script> GENERA ERROR POR LA KEY DE API-->
+<script src="{% static 'base/js/main.js' %}"></script>
+
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+<!--<script src='https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js'></script>  causa error al cerrar el navbar-->
+
+<script src="{% static 'base/js/propio.js' %}"></script>
+<script src="{% static 'base/js/contacto.js' %}"></script>
+<script type="text/javascript" src="{% static 'base/js/scripts/jquery-1.11.1.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'base/js/jqwidgets/jqxcore.js' %}"></script>
+<script type="text/javascript" src="{% static 'base/js/jqwidgets/jqxinput.js' %}"></script>
+<script type="text/javascript" src="{% static 'base/js/jqwidgets/jqxbuttons.js' %}"></script>
+
+
+</body>
+
+</html>

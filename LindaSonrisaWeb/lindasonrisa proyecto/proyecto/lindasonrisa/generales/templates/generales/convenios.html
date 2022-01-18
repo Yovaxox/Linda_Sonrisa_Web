@@ -1,0 +1,69 @@
+{% extends 'base/base.html' %}
+{% load static %}
+{% block titulo %}
+    Linda Sonrisa - Convenios
+{% endblock %}
+
+{% block content %}
+    <div class="container"><br>
+        <!-- card convenio -->
+        <div class="card" id="card_convenio">
+            <div class="card-body">
+                <h5 class="card-title">Convenios con FONASA</h5>
+                <p class="card-text">Si estás afiliado a FONASA puedes atenderte en nuestro Centro Odontológico
+                    y comprar directamente tu bono electrónico.</p>
+            </div>
+            <div class="hover12 column">
+                <figure><img src="{% static 'base/images/convenios/fonasa.jpg' %}" class="card-img-top" alt="fonasa">
+                </figure>
+            </div>
+            <div class="card-body">
+                <p class="card-text">Realiza directamente la compra de tu Bono Electrónico en nuestro Centro
+                    Odontológico
+                    Linda Sonrisa,
+                    sin necesidad de hacerlo en oficinas de FONASA.</p>
+            </div>
+        </div>
+        <!-- fin card convenio -->
+        <!-- card convenio -->
+        <div class="card" id="card_convenio">
+            <div class="card-body">
+                <h5 class="card-title">Convenios Bono Electrónico</h5>
+                <p class="card-text">Ya no necesitas ir a tu ISAPRE para pedir tu bono. Ahora puedes solicitarlo
+                    directamente en la recepción de nuestro Centro Odontológica de Linda Sonrisa.</p>
+            </div>
+            <div class="hover12 column">
+                <figure><img src="{% static 'base/images/convenios/isapre.jpg' %}" class="card-img-top" alt="fonasa">
+                </figure>
+            </div>
+            <div class="card-body">
+                <p class="card-text">Tradicionalmente, para la atención en los centros médicos necesitabas adquirir su
+                    bono directamente en tu
+                    ISAPRE o FONASA, las que en algunos casos se encontraban presentes en los centros médicos. Sin
+                    embargo, su tiempo de
+                    compra era limitado y acorde al horario de atención de estas instituciones, no coincidentes a el
+                    Centro de Linda Sonrisa.</p>
+            </div>
+        </div>
+        <!-- fin card convenio -->
+        <!-- card convenio -->
+        <div class="card" id="card_convenio">
+            <div class="card-body">
+                <h5 class="card-title">Convenios con Transank</h5>
+                <p class="card-text">A partir de este mes, puedes cancelar con cualquier tarjeta de crédito con cuotas
+                    desde 3 hasta 12 sin interés en cualquier servicio odontológico.</p>
+            </div>
+            <div class="hover12 column">
+                <figure><img src="{% static 'base/images/convenios/metodos.png' %}" class="card-img-top" alt="fonasa">
+                </figure>
+            </div>
+            <div class="card-body">
+                <p class="card-text">Adicionalmente, si pagas con Tarjeta Santander puedes obtener un descuento del 15%
+                    en servicios de higiene y ortodoncia.
+                    Si pagas con débito puedes conseguir un descuento del 10% en servicios de higiene.
+                </p>
+            </div>
+        </div>
+        <!-- fin card convenio -->
+    </div>
+{% endblock %}

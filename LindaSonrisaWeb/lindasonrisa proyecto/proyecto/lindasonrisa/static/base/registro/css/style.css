@@ -1,0 +1,64 @@
+
+h2 {
+    color: #fff;
+    font-family: 'Monda', sans-serif;
+    font-size: 20px
+}
+
+#step_two, #step_three, #step_four {
+    display: none;
+}
+
+.ui.red.button, .ui.red.buttons .button {
+    background-color: rgb(65, 171, 173);
+}
+
+.ui.red.button:hover {
+    background-color: rgb(43, 109, 110);
+}
+
+.ui.red.button:focus {
+    background-color: rgb(43, 109, 110);
+}
+
+.ui.steps .step.active .title {
+    color: #000;
+}
+
+#error-msg {
+    display: none;
+}
+
+.form-wrapper {
+    position: relative;
+}
+
+#loader {
+    display: none;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+}
+
+#cancelar {
+    background-color: #540b09;
+}
+
+#error-msg-pdf, #pwd_confirm, #p_usuario, #p_pwd,
+#p_rut, #p_nombre, #p_apellidop, #p_apellidom,
+#p_movil, #p_fijo, #p_region, #p_comuna,
+#p_direccion, #field_pasaporte, #p_genero,
+#p_fecha, #p_usuario_registrado {
+    display: none;
+}
+
+#p_pasaporte {
+    display: none;
+    color: red;
+}
+
+#obligatorio {
+    color: red;
+}

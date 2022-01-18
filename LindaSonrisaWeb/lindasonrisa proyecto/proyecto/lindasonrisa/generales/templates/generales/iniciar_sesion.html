@@ -1,0 +1,88 @@
+{% extends 'base/base.html' %}
+{% load static %}
+{% block titulo %}
+    Linda Sonrisa - Iniciar sesión
+{% endblock %}
+{% block content %}
+    <div class="container" id="container_login">
+        <form method="POST">
+            {% csrf_token %}
+            <div class="form-group">
+                <label for="input_rut"><span style="color:red;">(*)</span> RUT</label>
+                <input type="text" class="form-control" id="id_username" name="username" placeholder="Ingresa tu RUT"
+                       required>
+            </div>
+            <div class="alert alert-danger" role="alert" id="alertRut">
+                Por favor ingrese su RUT.
+            </div>
+            <div class="form-group">
+                <label for="input_password"><span style="color:red;">(*)</span> Contraseña</label>
+                <input type="password" class="form-control" id="id_password" name="password"
+                       placeholder="Ingresa tu contraseña" required>
+                <small id="recordatorio" class="form-text text-muted">Nunca compartas tu contraseña.</small>
+            </div>
+            <div class="alert alert-danger" role="alert" id="alertPassword">
+                Por favor escriba su contraseña.
+            </div>
+            <p id="text_links"><a id="links_login" href="{% url 'generales:password_reset' %}">¿Haz olvidado tu
+                contraseña?</a></p>
+            <p id="text_links"><a id="links_login" href="{% url 'generales:registro' %}">¿No estás registrado?
+                ¡Registrate
+                aquí y reserva online!</a></p>
+            <!--<button type="submit" id="botonEntrar" name="entrar" class="btn btn-primary">Entrar</button>-->
+            <button type="submit" id="botonEntrar" name="entrar" class="btn btn-primary"
+                    onclick="validarLogin()">Entrar
+            </button>
+        </form>
+
+        <!-- Modal -->
+        <form method="POST">
+            {% csrf_token %}
+            <div class="modal fade" id="modalRecuperar" tabindex="-1" role="dialog" aria-labelledby="recuperarCorreo"
+                 aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="recuperarCorreo">Ingresa tu correo electrónico</h5>
+                        </div>
+                        <div class="modal-body">
+
+                            <p>Enviaremos un correo a tu bandeja de entrada para reestablecer la contraseña.</p>
+                            <input type="email" class="form-control" id="input_recuperarCorreo"
+                                   aria-describedby="emailHelp"
+                                   placeholder="Ingresar correo">
+                            <div class="alert alert-danger" role="alert" id="alertRecuperarCorreo">
+                                Por favor, escriba su correo válido.
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                            <button type="submit" class="btn btn-primary" onclick="validarRecuperarPwd()">Enviar
+                                correo
+                            </button>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <script>
+        function esconder() {
+            $('.mouse').css({
+                'display': 'none'
+            });
+        }
+
+        function addClassBody() {
+            let body = document.body;
+            body.classList.add("fondo");
+        }
+
+        window.onload = function () {
+            esconder();
+            addClassBody();
+        };
+    </script>
+{% endblock %}

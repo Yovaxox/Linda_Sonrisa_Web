@@ -1,0 +1,426 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <title>
+        Linda Sonrisa - Registro
+    </title>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href="https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800&display=swap"
+          rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Amatic+SC:400,700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="{% static 'base/css/open-iconic-bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'base/css/animate.css' %}">
+
+    <link rel="stylesheet" href="{% static 'base/css/owl.carousel.min.css' %}">
+    <link rel="stylesheet" href="{% static 'base/css/owl.theme.default.min.css' %}">
+    <link rel="stylesheet" href="{% static 'base/css/magnific-popup.css' %}">
+
+    <link rel="stylesheet" href="{% static 'base/css/aos.css' %}">
+
+    <link rel="stylesheet" href="{% static 'base/css/ionicons.min.css' %}">
+
+    <link rel="stylesheet" href="{% static 'base/css/bootstrap-datepicker.css' %}">
+    <link rel="stylesheet" href="{% static 'base/css/jquery.timepicker.css' %}">
+
+
+    <link rel="stylesheet" href="{% static 'base/css/flaticon.css' %}">
+    <link rel="stylesheet" href="{% static 'base/css/icomoon.css' %}">
+    <link rel="stylesheet" href="{% static 'base/css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'base/css/propio.css' %}">
+    <link href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.0.3/css/font-awesome.css'>
+    <!--Google font-->
+    <link href="https://fonts.googleapis.com/css?family=Monda" rel="stylesheet">
+    <!--semantic ui css-->
+    <link rel="stylesheet" href="{% static 'base/registro/css/semantic.min.css' %}">
+    <!--custom style css-->
+    <link rel="stylesheet" href="{% static 'base/registro/css/style.css' %}">
+    <!--css file for icons-->
+    <link rel="stylesheet" href="{% static 'base/registro/components/icon.min.css' %}">
+
+</head>
+
+<body>
+<nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
+    <div class="container">
+        <a href="{% url 'generales:home' %}"><img alt="logo" id="logo" src="{% static 'base/images/logo.jpg' %}"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav"
+                aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation" id="text-nav">
+            <span class="oi oi-menu" id="text-nav"></span> Menú
+        </button>
+
+        <div class="collapse navbar-collapse" id="ftco-nav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item" id="hovermenu"><a href="{% url 'generales:home' %}" class="nav-link">Inicio</a>
+                </li>
+                <li class="nav-item" id="hovermenu"><a href="{% url 'generales:nosotros' %}"
+                                                       class="nav-link">Nosotros</a>
+                </li>
+                <li class="nav-item" id="hovermenu"><a href="{% url 'generales:convenios' %}" class="nav-link">Convenios
+                    &
+                    Promociones</a></li>
+                <li class="nav-item" id="hovermenu"><a href="{% url 'generales:contacto' %}"
+                                                       class="nav-link">Contacto</a>
+                </li>
+                <li class="nav-item" id="hovermenu"><a href="{% url 'generales:servicios' %}"
+                                                       class="nav-link">Servicios</a>
+                </li>
+                <li class="nav-item" id="hovermenu"><a href="{% url 'generales:proceso_reserva' %}"
+                                                       class="nav-link">Reserva</a></li>
+                <li class="nav-item" id="hovermenu"><a href="{% url 'perfil:perfil' %}"
+                                                       class="nav-link">
+                    {% if user.is_authenticated %}
+                        ¡Bienvenido {{ user.usuario.nombre }}!
+                    {% else %}
+                        Iniciar sesión
+                        </a></li>
+                    {% endif %}
+            </ul>
+        </div>
+    </div>
+</nav>
+<div class="ui grid">
+    <div class="five wide column">
+        <!--This div dose'nt have any kind of Content -->
+    </div>
+
+    <!--Main content div-->
+    <div class="six wide column form-wrapper">
+
+
+        <!--Loader-->
+        <div id="loader" class="ui segment">
+            <p></p>
+            <div class="ui inverted active dimmer">
+                <div class="ui loader"></div>
+            </div>
+        </div>
+        <!--Loader-->
+
+
+        <!--Heading-->
+        <div class="container">
+            <h2 class="ui center aligned icon header">
+                Regístrate para los beneficios de Linda Sonrisa
+            </h2>
+            <h4 class="ui center aligned icon header">
+                ¡Si te registras puedes reservar horas omitiendo un extenso formulario! Además de poder gestionar tus
+                reservas
+                horarias.
+            </h4>
+        </div>
+        <!--Heading-->
+
+
+        <!--Step bar-->
+        <div class="ui mini steps" style="overflow:hidden;width:100%;font-family: 'Monda', sans-serif;">
+            <div class="active step step_one">
+                <i class="shield icon"></i>
+                <div class="content">
+                    <div class="title">Cuenta</div>
+                    <div class="description"></div>
+                </div>
+            </div>
+            <div class="disabled step step_two">
+                <i class="user icon"></i>
+                <div class="content">
+                    <div class="title">Datos personales</div>
+                    <div class="description"></div>
+                </div>
+            </div>
+            <div class="disabled step step_three">
+                <i class="certificate icon"></i>
+                <div class="content">
+                    <div class="title">Certificados</div>
+                    <div class="description"></div>
+                </div>
+            </div>
+        </div>
+        <!--Step bar-->
+
+
+        <!--Error message-->
+        <div id="error-msg" class="ui error message">
+            <i class="close icon"></i>
+            <div class="header">
+                Hubo algunos errores en esta etapa
+            </div>
+            <p><strong>Nota: </strong> Revise todos los campos</p>
+            <p id="p_correo_existe"></p>
+            <p id="p_correo"></p>
+            <p id="p_usuario"></p>
+            <p id="p_pwd"></p>
+            <p id="pwd_confirm"></p>
+            <p id="p_rut"></p>
+            <p id="p_rut_existe"></p>
+            <p id="p_nombre"></p>
+            <p id="p_apellidop"></p>
+            <p id="p_apellidom"></p>
+            <p id="p_fecha"></p>
+            <p id="p_genero"></p>
+            <p id="p_movil"></p>
+            <p id="p_fijo"></p>
+            <p id="p_region"></p>
+            <p id="p_comuna"></p>
+            <p id="p_direccion"></p>
+            <p id="p_usuario_registrado"></p>
+        </div>
+        <!--Error message-->
+
+        <!--Error message pdf-->
+        <div id="error-msg-pdf" class="ui error message">
+            <i class="close icon"></i>
+            <div class="header">
+                Hubo algunos errores en esta etapa
+            </div>
+            <p><strong>Nota: </strong> Los archivos deben ser en PDF.</p>
+        </div>
+        <!--Error message-->
+
+        <!--Form container-->
+        <div class="ui tall stacked segment">
+
+            <!--Form-->
+            <form class="ui form" method="POST" data-url="../postRegistro/" id="formRegistro"
+                  enctype="multipart/form-data">
+                {% csrf_token %}
+                <!--Step one-->
+                <div id="step_one">
+                    <div class="field">
+                        <label>Todos los campos son obligatorios.</label>
+                        <br>
+                        <label><span id="obligatorio">(*) </span>Correo electrónico</label>
+                        <input onfocus="hideErrorMsg('error-msg')" type="email" id="correo" name="correo"
+                               placeholder="Ingrese su correo electrónico" onchange="ValidateEmail()">
+                    </div>
+                    <div class="field">
+                        <label><span id="obligatorio">(*) </span>Contraseña</label>
+                        <input onfocus="hideErrorMsg('error-msg')" type="password" id="password" name="password"
+                               placeholder="Ingrese una contraseña" maxlength="20" onchange="validarPwd()">
+                    </div>
+                    <div class="field">
+                        <label><span id="obligatorio">(*) </span>Confirmar contraseña</label>
+                        <input onfocus="hideErrorMsg('error-msg')" type="password" id="confirm-password"
+                               name="confirm-password"
+                               placeholder="Confirme contraseña">
+
+                    </div>
+
+
+                    <button onclick="processStepOne()" type="button" class="ui red right labeled icon button">
+                        <i class="right arrow icon"></i>
+                        Siguiente
+                    </button>
+                </div>
+                <!--Step one-->
+
+                <!--Step two-->
+                <div id="step_two">
+                    <div class="field">
+                        <label>Todos los campos son obligatorios.</label>
+                        <br>
+                        <div class="field">
+                            <label>¿Es extranjero?</label>
+                            <input type="checkbox" id="extranjero" name="extranjero" onclick="checkExtranjero()">
+                            <p id="p_pasaporte"></p>
+                        </div>
+                        <label><span id="obligatorio">(*) </span>RUT <small> Usará su RUT para iniciar
+                            sesión.</small></label>
+                        <input onfocus="hideErrorMsg('error-msg')" type="text" id="rut" name="rut"
+                               placeholder="Ingrese su RUT. Ej. 11.111.111-1" onchange="validarRut()">
+                    </div>
+                    <div class="field">
+                        <label><span id="obligatorio">(*) </span>Nombre</label>
+                        <input onfocus="hideErrorMsg('error-msg')" type="text" id="nombre" name="nombre"
+                               placeholder="Ingrese su nombre" maxlength="20" onchange="validarNombre()">
+                    </div>
+                    <div class="field">
+                        <label><span id="obligatorio">(*) </span>Apellido paterno</label>
+                        <input onfocus="hideErrorMsg('error-msg')" type="text" id="apellidoPaterno"
+                               name="apellidoPaterno"
+                               placeholder="Ingrese apellido paterno" maxlength="20" onchange="validarApellidoP()">
+                    </div>
+                    <div class="field">
+                        <label><span id="obligatorio">(*) </span>Apellido materno</label>
+                        <input onfocus="hideErrorMsg('error-msg')" type="text" id="apellidoMaterno"
+                               name="apellidoMaterno"
+                               placeholder="Ingrese apellido materno" maxlength="20" onchange="validarApellidoM()">
+                    </div>
+                    <div class="field">
+                        <label><span id="obligatorio">(*) </span>Fecha de nacimiento</label>
+                        <input type="date" id="fechaNacimiento" name="fecha_nacimiento" min="1920-01-01"
+                               max="2002-12-31"
+                        >
+                    </div>
+                    <div class="field">
+                        <label><span id="obligatorio">(*) </span>Género</label>
+                        <div onfocus="hideErrorMsg('error-msg')" class="form-control" name="genero_id"
+                             id="genero"></div>
+                    </div>
+                    <div class="field">
+                        <label><span id="obligatorio">(*) </span>Número móvil</label>
+                        <input onfocus="hideErrorMsg('error-msg')" type="number" id="numMovil" name="numMovil"
+                               placeholder="Ingrese su número móvil (8 dígitos)" max="99999999" maxlength="8"
+                               onchange="validarMovil()">
+                    </div>
+                    <div class="field">
+                        <label><span id="obligatorio">(*) </span>Número fijo</label>
+                        <input onfocus="hideErrorMsg('error-msg')" type="number" id="numFijo" name="numFijo"
+                               placeholder="Ingrese su número fijo (8 dígitos)" max="99999999" maxlength="8"
+                               onchange="validarFijo()">
+                    </div>
+                    <div class="field">
+                        <label><span id="obligatorio">(*) </span>Región</label>
+                        <div onfocus="hideErrorMsg('error-msg')" class="form-control" name="region_id"
+                             id="regiones"></div>
+                    </div>
+                    <div class="field">
+                        <label><span id="obligatorio">(*) </span>Comuna</label>
+                        <div onfocus="hideErrorMsg('error-msg')" class="form-control" name="comuna_id"
+                             id="comunas"></div>
+                    </div>
+                    <div class="field">
+                        <label><span id="obligatorio">(*) </span>Dirección</label>
+
+                        <input onfocus="hideErrorMsg('error-msg')" type="text" id="direccion" name="direccion"
+                               placeholder="Ingrese su dirección" maxlength="30" onchange="validarDireccion()">
+                    </div>
+
+                    <button onclick="backToStepOne()" type="button" class="ui black left labeled icon button">
+                        <i class="left arrow icon"></i>
+                        Atrás
+                    </button>
+                    <button onclick="processStepTwo()" type="button" class="ui red right labeled icon button">
+                        <i class="right arrow icon" onclick="validarCombobox();"></i>
+                        Siguiente
+                    </button>
+                </div>
+                <!--Step two-->
+
+                <!--Step three-->
+                <div id="step_three">
+                    <div class="field">
+                        <label>Todos los archivos deben ser adjuntados en PDF, de otra forma no se subirán.</label>
+                        <br>
+                        <label>Certificado AFP</label>
+                        <input onfocus="hideErrorMsg('error-msg-pdf')" type="file" id="afp" name="afp"
+                               onchange="return validarPDF(id),Filevalidation(id)" accept="application/pdf">
+                    </div>
+                    <div class="field">
+                        <label>Certificado de liquidaciones</label>
+                        <input onfocus="hideErrorMsg('error-msg-pdf')" type="file" id="liquidaciones"
+                               name="liquidaciones"
+                               onchange="return validarPDF(id),Filevalidation(id)" accept="application/pdf">
+                    </div>
+                    <div class="field">
+                        <label>Certificado de finiquitos</label>
+                        <input onfocus="hideErrorMsg('error-msg-pdf')" type="file" id="finiquitos" name="finiquitos"
+                               onchange="return validarPDF(id),Filevalidation(id)" accept="application/pdf">
+                    </div>
+                    <div class="field">
+                        <label>Certificado de FONASA o ISAPRE</label>
+                        <input onfocus="hideErrorMsg('error-msg-pdf')" type="file" id="salud" name="salud"
+                               onchange="return validarPDF(id),Filevalidation(id)" accept="application/pdf">
+                    </div>
+                    <div class="field" id="field_pasaporte">
+                        <label>Certificado de Pasaporte</label>
+                        <input onfocus="hideErrorMsg('error-msg-pdf')" type="file" id="c_pasaporte" name="c_pasaporte"
+                               onchange="return validarPDF(id),Filevalidation(id)" accept="application/pdf">
+                    </div>
+                    <button onclick="backToStepTwo()" type="button" class="ui black left labeled icon button">
+                        <i class="left arrow icon"></i>
+                        Atrás
+                    </button>
+                    <button onclick="processStepThree()" type="button" class="ui red right labeled icon button">
+                        <i class="right arrow icon"></i>
+                        Finalizar
+                    </button>
+                </div>
+                <!--Step three-->
+
+                <!--Step four-->
+                <div id="step_four">
+                    <div class="ui olive message">¡Genial! Ahora estas listo para guardar o cancelar el registro.</div>
+                    <div id="carga-registro" style="display:none;">
+                        <!-- div para cargar un loader -->
+                        <div class="form-group d-flex">
+                            <img alt="carga-documentos"
+                                 src="{% static 'base/images/load_contacto.gif' %}">
+                            <p> Guardando...</p>
+                        </div>
+
+                    </div>
+                    <div id="mensaje_registro" style="display:none;">
+                    </div>
+                    <div class="ui buttons">
+                        <p><a href="{% url 'generales:home' %}"
+                              onclick="return confirm('¿Estás seguro de cancelar a los beneficios de Linda Sonrisa?, serás redirigido a la página principal.')"
+                              class="ui red button" id="cancelar">Cancelar</a></p>
+                        <div class="o"></div>
+                        <input type="submit" id="guardar"
+                               class="ui positive button" value="Guardar"/>
+                        <br>
+                        <hr>
+                        <!--Terminar este boton como submit  // onclick="window.location.assign('finish.html')"-->
+                    </div>
+                    <a href="{% url 'generales:iniciar_sesion' %}">
+                        <button type="button" id="irPerfil" class="ui red right labeled icon button">
+                            <i class="right arrow icon"></i>
+                            Ir al perfil
+                        </button>
+                    </a>
+                </div>
+                <!--Step four-->
+
+            </form>
+            <!--Form-->
+
+        </div>
+        <!--Form container-->
+
+
+    </div>
+    <!--Main content div-->
+
+    <div class="five wide column">
+        <!--This div dose'nt have any kind of Content -->
+    </div>
+</div>
+<!--latest jquery library CDN-->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!--semantic ui js-->
+<script type="text/javascript" src="{% static 'base/registro/js/semantic.min.js' %}"></script>
+<!--custom js file-->
+<script type="text/javascript" src="{% static 'base/registro/js/registro.js' %}"></script>
+
+<script src="{% static 'base/js/jquery-migrate-3.0.1.min.js' %}"></script>
+<script src="{% static 'base/js/popper.min.js' %}"></script>
+<script src="{% static 'base/js/bootstrap.min.js' %}"></script>
+<script src="{% static 'base/js/jquery.easing.1.3.js' %}"></script>
+<script src="{% static 'base/js/jquery.waypoints.min.js' %}"></script>
+<script src="{% static 'base/js/jquery.stellar.min.js' %}"></script>
+<script src="{% static 'base/js/owl.carousel.min.js' %}"></script>
+<script src="{% static 'base/js/jquery.magnific-popup.min.js' %}"></script>
+<script src="{% static 'base/js/aos.js' %}"></script>
+<script src="{% static 'base/js/jquery.animateNumber.min.js' %}"></script>
+<script src="{% static 'base/js/bootstrap-datepicker.js' %}"></script>
+<script src="{% static 'base/js/scrollax.min.js' %}"></script>
+
+<link rel="stylesheet" href="{% static 'base/js/jqwidgets/styles/jqx.base.css' %}" type="text/css"/>
+
+<link rel="stylesheet" href="{% static 'base/js/jqwidgets/styles/jqx.material.css' %}" type="text/css"/>
+<script type="text/javascript" src="{% static 'base/js/jqwidgets/jqxcore.js' %}"></script>
+<script type="text/javascript" src="{% static 'base/js/jqwidgets/jqxbuttons.js' %}"></script>
+<script type="text/javascript" src="{% static 'base/js/jqwidgets/jqxscrollbar.js' %}"></script>
+<script type="text/javascript" src="{% static 'base/js/jqwidgets/jqxlistbox.js' %}"></script>
+<script type="text/javascript" src="{% static 'base/js/jqwidgets/jqxcombobox.js' %}"></script>
+</body>
+
+
+</html>

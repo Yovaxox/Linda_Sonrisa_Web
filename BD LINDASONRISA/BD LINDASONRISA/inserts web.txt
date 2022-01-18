@@ -1,0 +1,480 @@
+------------Tabla Region--------------
+
+insert into region (id,titulo) values (1,'Arica y Parinacota');
+insert into region (id,titulo) values (2,'Tarapacá');
+insert into region (id,titulo) values (3,'Antofagasta');
+insert into region (id,titulo) values (4,'Atacama');
+insert into region (id,titulo) values (5,'Coquimbo');
+insert into region (id,titulo) values (6,'Valparaiso');
+insert into region (id,titulo) values (7,'Metropolitana de Santiago');
+insert into region (id,titulo) values (8,'Libertador General Bernardo O’Higgins');
+insert into region (id,titulo) values (9,'Maule');
+insert into region (id,titulo) values (10,'Ñuble');
+insert into region (id,titulo) values (11,'Biobío');
+insert into region (id,titulo) values (12,'La Araucanía');
+insert into region (id,titulo) values (13,'Los Ríos');
+insert into region (id,titulo) values (14,'Los Lagos');
+insert into region (id,titulo) values (15,'Aysén del General Carlos Ibáñez del Campo');
+insert into region (id,titulo) values (16,'Magallanes y de la Antártica Chilena');
+
+------------Tabla Comuna---------------
+
+insert into comuna (id, titulo, region_id) values       (1,'Arica',1);
+insert into comuna (id, titulo, region_id) values       (2,'Camarones',1);
+insert into comuna (id, titulo, region_id) values       (3,'General Lagos',1);
+insert into comuna (id, titulo, region_id) values       (4,'Putre',1);
+insert into comuna (id, titulo, region_id) values       (5,'Alto Hospicio',2);
+insert into comuna (id, titulo, region_id) values	(6,'Iquique',2);
+insert into comuna (id, titulo, region_id) values	(7,'Camiña',2);
+insert into comuna (id, titulo, region_id) values	(8,'Colchane',2);
+insert into comuna (id, titulo, region_id) values	(9,'Huara',2);
+insert into comuna (id, titulo, region_id) values	(10,'Pica',2);
+insert into comuna (id, titulo, region_id) values	(11,'Pozo Almonte',2);
+insert into comuna (id, titulo, region_id) values	(12,'Antofagasta',3);
+insert into comuna (id, titulo, region_id) values	(13,'Mejillones',3);
+insert into comuna (id, titulo, region_id) values	(14,'Sierra Gorda',3);
+insert into comuna (id, titulo, region_id) values	(15,'Taltal',3);
+insert into comuna (id, titulo, region_id) values	(16,'Calama',3);
+insert into comuna (id, titulo, region_id) values	(17,'Ollague',3);
+insert into comuna (id, titulo, region_id) values	(18,'San Pedro de Atacama',3);
+insert into comuna (id, titulo, region_id) values	(19,'María Elena',3);
+insert into comuna (id, titulo, region_id) values	(20,'Tocopilla',3);
+insert into comuna (id, titulo, region_id) values	(21,'Chañaral',4);
+insert into comuna (id, titulo, region_id) values	(22,'Diego de Almagro',4);
+insert into comuna (id, titulo, region_id) values	(23,'Caldera',4);
+insert into comuna (id, titulo, region_id) values	(24,'Copiapó',4);
+insert into comuna (id, titulo, region_id) values	(25,'Tierra Amarilla',4);
+insert into comuna (id, titulo, region_id) values	(26,'Alto del Carmen',4);
+insert into comuna (id, titulo, region_id) values	(27,'Freirina',4);
+insert into comuna (id, titulo, region_id) values	(28,'Huasco',4);
+insert into comuna (id, titulo, region_id) values	(29,'Vallenar',4);
+insert into comuna (id, titulo, region_id) values	(30,'Canela',5);
+insert into comuna (id, titulo, region_id) values	(31,'Illapel',5);
+insert into comuna (id, titulo, region_id) values	(32,'Los Vilos',5);
+insert into comuna (id, titulo, region_id) values	(33,'Salamanca',5);
+insert into comuna (id, titulo, region_id) values	(34,'Andacollo',5);
+insert into comuna (id, titulo, region_id) values	(35,'Coquimbo',5);
+insert into comuna (id, titulo, region_id) values	(36,'La Higuera',5);
+insert into comuna (id, titulo, region_id) values	(37,'La Serena',5);
+insert into comuna (id, titulo, region_id) values	(38,'Paihuaco',5);
+insert into comuna (id, titulo, region_id) values	(39,'Vicuña',5);
+insert into comuna (id, titulo, region_id) values	(40,'Combarbalá',5);
+insert into comuna (id, titulo, region_id) values	(41,'Monte Patria',5);
+insert into comuna (id, titulo, region_id) values	(42,'Ovalle',5);
+insert into comuna (id, titulo, region_id) values	(43,'Punitaqui',5);
+insert into comuna (id, titulo, region_id) values	(44,'Río Hurtado',5);
+insert into comuna (id, titulo, region_id) values	(45,'Isla de Pascua',6);
+insert into comuna (id, titulo, region_id) values	(46,'Calle Larga',6);
+insert into comuna (id, titulo, region_id) values	(47,'Los Andes',6);
+insert into comuna (id, titulo, region_id) values	(48,'Rinconada',6);
+insert into comuna (id, titulo, region_id) values	(49,'San Esteban',6);
+insert into comuna (id, titulo, region_id) values	(50,'La Ligua',6);
+insert into comuna (id, titulo, region_id) values	(51,'Papudo',6);
+insert into comuna (id, titulo, region_id) values	(52,'Petorca',6);
+insert into comuna (id, titulo, region_id) values	(53,'Zapallar',6);
+insert into comuna (id, titulo, region_id) values	(54,'Hijuelas',6);
+insert into comuna (id, titulo, region_id) values	(55,'La Calera',6);
+insert into comuna (id, titulo, region_id) values	(56,'La Cruz',6);
+insert into comuna (id, titulo, region_id) values	(57,'Limache',6);
+insert into comuna (id, titulo, region_id) values	(58,'Nogales',6);
+insert into comuna (id, titulo, region_id) values	(59,'Olmué',6);
+insert into comuna (id, titulo, region_id) values	(60,'Quillota',6);
+insert into comuna (id, titulo, region_id) values	(61,'Algarrobo',6);
+insert into comuna (id, titulo, region_id) values	(62,'Cartagena',6);
+insert into comuna (id, titulo, region_id) values	(63,'El Quisco',6);
+insert into comuna (id, titulo, region_id) values	(64,'El Tabo',6);
+insert into comuna (id, titulo, region_id) values	(65,'San Antonio',6);
+insert into comuna (id, titulo, region_id) values	(66,'Santo Domingo',6);
+insert into comuna (id, titulo, region_id) values	(67,'Catemu',6);
+insert into comuna (id, titulo, region_id) values	(68,'Llaillay',6);
+insert into comuna (id, titulo, region_id) values	(69,'Panquehue',6);
+insert into comuna (id, titulo, region_id) values	(70,'Putaendo',6);
+insert into comuna (id, titulo, region_id) values	(71,'San Felipe',6);
+insert into comuna (id, titulo, region_id) values	(72,'Santa María',6);
+insert into comuna (id, titulo, region_id) values	(73,'Casablanca',6);
+insert into comuna (id, titulo, region_id) values	(74,'Concón',6);
+insert into comuna (id, titulo, region_id) values	(75,'Juan Fernández',6);
+insert into comuna (id, titulo, region_id) values	(76,'Puchuncaví',6);
+insert into comuna (id, titulo, region_id) values	(77,'Quilpué',6);
+insert into comuna (id, titulo, region_id) values	(78,'Quintero',6);
+insert into comuna (id, titulo, region_id) values	(79,'Valparaíso',6);
+insert into comuna (id, titulo, region_id) values	(80,'Villa Alemana',6);
+insert into comuna (id, titulo, region_id) values	(81,'Viña del Mar',6);
+insert into comuna (id, titulo, region_id) values	(82,'Colina',7);
+insert into comuna (id, titulo, region_id) values	(83,'Lampa',7);
+insert into comuna (id, titulo, region_id) values	(84,'Tiltil',7);
+insert into comuna (id, titulo, region_id) values	(85,'Pirque',7);
+insert into comuna (id, titulo, region_id) values	(86,'Puente Alto',7);
+insert into comuna (id, titulo, region_id) values	(87,'San José de Maipo',7);
+insert into comuna (id, titulo, region_id) values	(88,'Buin',7);
+insert into comuna (id, titulo, region_id) values	(89,'Calera de Tango',7);
+insert into comuna (id, titulo, region_id) values	(90,'Paine',7);
+insert into comuna (id, titulo, region_id) values	(91,'San Bernardo',7);
+insert into comuna (id, titulo, region_id) values	(92,'Alhué',7);
+insert into comuna (id, titulo, region_id) values	(93,'Curacaví',7);
+insert into comuna (id, titulo, region_id) values	(94,'María Pinto',7);
+insert into comuna (id, titulo, region_id) values	(95,'Melipilla',7);
+insert into comuna (id, titulo, region_id) values	(96,'San Pedro',7);
+insert into comuna (id, titulo, region_id) values	(97,'Cerrillos',7);
+insert into comuna (id, titulo, region_id) values	(98,'Cerro Navia',7);
+insert into comuna (id, titulo, region_id) values	(99,'Conchalí',7);
+insert into comuna (id, titulo, region_id) values	(100,'El Bosque',7);
+insert into comuna (id, titulo, region_id) values	(101,'Estación Central',7);
+insert into comuna (id, titulo, region_id) values	(102,'Huechuraba',7);
+insert into comuna (id, titulo, region_id) values	(103,'Independencia',7);
+insert into comuna (id, titulo, region_id) values	(104,'La Cisterna',7);
+insert into comuna (id, titulo, region_id) values	(105,'La Granja',7);
+insert into comuna (id, titulo, region_id) values	(106,'La Florida',7);
+insert into comuna (id, titulo, region_id) values	(107,'La Pintana',7);
+insert into comuna (id, titulo, region_id) values	(108,'La Reina',7);
+insert into comuna (id, titulo, region_id) values	(109,'Las Condes',7);
+insert into comuna (id, titulo, region_id) values	(110,'Lo Barnechea',7);
+insert into comuna (id, titulo, region_id) values	(111,'Lo Espejo',7);
+insert into comuna (id, titulo, region_id) values	(112,'Lo Prado',7);
+insert into comuna (id, titulo, region_id) values	(113,'Macul',7);
+insert into comuna (id, titulo, region_id) values	(114,'Maipú',7);
+insert into comuna (id, titulo, region_id) values	(115,'Ñuñoa',7);
+insert into comuna (id, titulo, region_id) values	(116,'Pedro Aguirre Cerda',7);
+insert into comuna (id, titulo, region_id) values	(117,'Peñalolén',7);
+insert into comuna (id, titulo, region_id) values	(118,'Providencia',7);
+insert into comuna (id, titulo, region_id) values	(119,'Pudahuel',7);
+insert into comuna (id, titulo, region_id) values	(120,'Quilicura',7);
+insert into comuna (id, titulo, region_id) values	(121,'Quinta Normal',7);
+insert into comuna (id, titulo, region_id) values	(122,'Recoleta',7);
+insert into comuna (id, titulo, region_id) values	(123,'Renca',7);
+insert into comuna (id, titulo, region_id) values	(124,'San Miguel',7);
+insert into comuna (id, titulo, region_id) values	(125,'San Joaquín',7);
+insert into comuna (id, titulo, region_id) values	(126,'San Ramón',7);
+insert into comuna (id, titulo, region_id) values	(127,'Santiago',7);
+insert into comuna (id, titulo, region_id) values	(128,'Vitacura',7);
+insert into comuna (id, titulo, region_id) values	(129,'El Monte',7);
+insert into comuna (id, titulo, region_id) values	(130,'Isla de Maipo',7);
+insert into comuna (id, titulo, region_id) values	(131,'Padre Hurtado',7);
+insert into comuna (id, titulo, region_id) values	(132,'Peñaflor',7);
+insert into comuna (id, titulo, region_id) values	(133,'Talagante',7);
+insert into comuna (id, titulo, region_id) values	(134,'Codegua',8);
+insert into comuna (id, titulo, region_id) values	(135,'Coínco',8);
+insert into comuna (id, titulo, region_id) values	(136,'Coltauco',8);
+insert into comuna (id, titulo, region_id) values	(137,'Doñihue',8);
+insert into comuna (id, titulo, region_id) values	(138,'Graneros',8);
+insert into comuna (id, titulo, region_id) values	(139,'Las Cabras',8);
+insert into comuna (id, titulo, region_id) values	(140,'Machalí',8);
+insert into comuna (id, titulo, region_id) values	(141,'Malloa',8);
+insert into comuna (id, titulo, region_id) values	(142,'Mostazal',8);
+insert into comuna (id, titulo, region_id) values	(143,'Olivar',8);
+insert into comuna (id, titulo, region_id) values	(144,'Peumo',8);
+insert into comuna (id, titulo, region_id) values	(145,'Pichidegua',8);
+insert into comuna (id, titulo, region_id) values	(146,'Quinta de Tilcoco',8);
+insert into comuna (id, titulo, region_id) values	(147,'Rancagua',8);
+insert into comuna (id, titulo, region_id) values	(148,'Rengo',8);
+insert into comuna (id, titulo, region_id) values	(149,'Requínoa',8);
+insert into comuna (id, titulo, region_id) values	(150,'San Vicente de Tagua Tagua',8);
+insert into comuna (id, titulo, region_id) values	(151,'La Estrella',8);
+insert into comuna (id, titulo, region_id) values	(152,'Litueche',8);
+insert into comuna (id, titulo, region_id) values	(153,'Marchihue',8);
+insert into comuna (id, titulo, region_id) values	(154,'Navidad',8);
+insert into comuna (id, titulo, region_id) values	(155,'Peredones',8);
+insert into comuna (id, titulo, region_id) values	(156,'Pichilemu',8);
+insert into comuna (id, titulo, region_id) values	(157,'Chépica',8);
+insert into comuna (id, titulo, region_id) values	(158,'Chimbarongo',8);
+insert into comuna (id, titulo, region_id) values	(159,'Lolol',8);
+insert into comuna (id, titulo, region_id) values	(160,'Nancagua',8);
+insert into comuna (id, titulo, region_id) values	(161,'Palmilla',8);
+insert into comuna (id, titulo, region_id) values	(162,'Peralillo',8);
+insert into comuna (id, titulo, region_id) values	(163,'Placilla',8);
+insert into comuna (id, titulo, region_id) values	(164,'Pumanque',8);
+insert into comuna (id, titulo, region_id) values	(165,'San Fernando',8);
+insert into comuna (id, titulo, region_id) values	(166,'Santa Cruz',8);
+insert into comuna (id, titulo, region_id) values	(167,'Cauquenes',9);
+insert into comuna (id, titulo, region_id) values	(168,'Chanco',9);
+insert into comuna (id, titulo, region_id) values	(169,'Pelluhue',9);
+insert into comuna (id, titulo, region_id) values	(170,'Curicó',9);
+insert into comuna (id, titulo, region_id) values	(171,'Hualañé',9);
+insert into comuna (id, titulo, region_id) values	(172,'Licantén',9);
+insert into comuna (id, titulo, region_id) values	(173,'Molina',9);
+insert into comuna (id, titulo, region_id) values	(174,'Rauco',9);
+insert into comuna (id, titulo, region_id) values	(175,'Romeral',9);
+insert into comuna (id, titulo, region_id) values	(176,'Sagrada Familia',9);
+insert into comuna (id, titulo, region_id) values	(177,'Teno',9);
+insert into comuna (id, titulo, region_id) values	(178,'Vichuquén',9);
+insert into comuna (id, titulo, region_id) values	(179,'Colbún',9);
+insert into comuna (id, titulo, region_id) values	(180,'Linares',9);
+insert into comuna (id, titulo, region_id) values       (181,'Longaví',9);
+insert into comuna (id, titulo, region_id) values	(182,'Parral',9);
+insert into comuna (id, titulo, region_id) values	(183,'Retiro',9);
+insert into comuna (id, titulo, region_id) values	(184,'San Javier',9);
+insert into comuna (id, titulo, region_id) values	(185,'Villa Alegre',9);
+insert into comuna (id, titulo, region_id) values	(186,'Yerbas Buenas',9);
+insert into comuna (id, titulo, region_id) values	(187,'Constitución',9);
+insert into comuna (id, titulo, region_id) values	(188,'Curepto',9);
+insert into comuna (id, titulo, region_id) values	(189,'Empedrado',9);
+insert into comuna (id, titulo, region_id) values	(190,'Maule',9);
+insert into comuna (id, titulo, region_id) values	(191,'Pelarco',9);
+insert into comuna (id, titulo, region_id) values	(192,'Pencahue',9);
+insert into comuna (id, titulo, region_id) values	(193,'Río Claro',9);
+insert into comuna (id, titulo, region_id) values	(194,'San Clemente',9);
+insert into comuna (id, titulo, region_id) values	(195,'San Rafael',9);
+insert into comuna (id, titulo, region_id) values	(196,'Talca',9);
+insert into comuna (id, titulo, region_id) values	(197,'Bulnes',10);
+insert into comuna (id, titulo, region_id) values	(198,'Chillán',10);
+insert into comuna (id, titulo, region_id) values	(199,'Chillán Viejo',10);
+insert into comuna (id, titulo, region_id) values	(200,'Cobquecura',10);
+insert into comuna (id, titulo, region_id) values	(201,'Coelemu',10);
+insert into comuna (id, titulo, region_id) values	(202,'Coihueco',10);
+insert into comuna (id, titulo, region_id) values	(203,'El Carmen',10);
+insert into comuna (id, titulo, region_id) values	(204,'Ninhue',10);
+insert into comuna (id, titulo, region_id) values	(205,'Ñiquen',10);
+insert into comuna (id, titulo, region_id) values	(206,'Pemuco',10);
+insert into comuna (id, titulo, region_id) values	(207,'Pinto',10);
+insert into comuna (id, titulo, region_id) values	(208,'Portezuelo',10);
+insert into comuna (id, titulo, region_id) values	(209,'Quirihue',10);
+insert into comuna (id, titulo, region_id) values	(210,'Ránquil',10);
+insert into comuna (id, titulo, region_id) values	(211,'Treguaco',10);
+insert into comuna (id, titulo, region_id) values	(212,'Quillón',10);
+insert into comuna (id, titulo, region_id) values	(213,'San Carlos',10);
+insert into comuna (id, titulo, region_id) values	(214,'San Fabián',10);
+insert into comuna (id, titulo, region_id) values	(215,'San Ignacio',10);
+insert into comuna (id, titulo, region_id) values	(216,'San Nicolás',10);
+insert into comuna (id, titulo, region_id) values	(217,'Yungay',10);
+insert into comuna (id, titulo, region_id) values	(218,'Arauco',11);
+insert into comuna (id, titulo, region_id) values	(219,'Cañete',11);
+insert into comuna (id, titulo, region_id) values	(220,'Contulmo',11);
+insert into comuna (id, titulo, region_id) values	(221,'Curanilahue',11);
+insert into comuna (id, titulo, region_id) values	(222,'Lebu',11);
+insert into comuna (id, titulo, region_id) values	(223,'Los Álamos',11);
+insert into comuna (id, titulo, region_id) values	(224,'Tirúa',11);
+insert into comuna (id, titulo, region_id) values	(225,'Alto Biobío',11);
+insert into comuna (id, titulo, region_id) values	(226,'Antuco',11);
+insert into comuna (id, titulo, region_id) values	(227,'Cabrero',11);
+insert into comuna (id, titulo, region_id) values	(228,'Laja',11);
+insert into comuna (id, titulo, region_id) values	(229,'Los Ángeles',11);
+insert into comuna (id, titulo, region_id) values	(230,'Mulchén',11);
+insert into comuna (id, titulo, region_id) values	(231,'Nacimiento',11);
+insert into comuna (id, titulo, region_id) values	(232,'Negrete',11);
+insert into comuna (id, titulo, region_id) values	(233,'Quilaco',11);
+insert into comuna (id, titulo, region_id) values	(234,'Quilleco',11);
+insert into comuna (id, titulo, region_id) values	(235,'San Rosendo',11);
+insert into comuna (id, titulo, region_id) values	(236,'Santa Bárbara',11);
+insert into comuna (id, titulo, region_id) values	(237,'Tucapel',11);
+insert into comuna (id, titulo, region_id) values	(238,'Yumbel',11);
+insert into comuna (id, titulo, region_id) values	(239,'Chiguayante',11);
+insert into comuna (id, titulo, region_id) values	(240,'Concepción',11);
+insert into comuna (id, titulo, region_id) values	(241,'Coronel',11);
+insert into comuna (id, titulo, region_id) values	(242,'Florida',11);
+insert into comuna (id, titulo, region_id) values	(243,'Hualpén',11);
+insert into comuna (id, titulo, region_id) values	(244,'Hualqui',11);
+insert into comuna (id, titulo, region_id) values	(245,'Lota',11);
+insert into comuna (id, titulo, region_id) values	(246,'Penco',11);
+insert into comuna (id, titulo, region_id) values	(247,'San Pedro de La Paz',11);
+insert into comuna (id, titulo, region_id) values	(248,'Santa Juana',11);
+insert into comuna (id, titulo, region_id) values	(249,'Talcahuano',11);
+insert into comuna (id, titulo, region_id) values	(250,'Tomé',11);
+insert into comuna (id, titulo, region_id) values	(251,'Carahue',12);
+insert into comuna (id, titulo, region_id) values	(252,'Cholchol',12);
+insert into comuna (id, titulo, region_id) values	(253,'Cunco',12);
+insert into comuna (id, titulo, region_id) values	(254,'Curarrehue',12);
+insert into comuna (id, titulo, region_id) values	(255,'Freire',12);
+insert into comuna (id, titulo, region_id) values	(256,'Galvarino',12);
+insert into comuna (id, titulo, region_id) values	(257,'Gorbea',12);
+insert into comuna (id, titulo, region_id) values	(258,'Lautaro',12);
+insert into comuna (id, titulo, region_id) values	(259,'Loncoche',12);
+insert into comuna (id, titulo, region_id) values	(260,'Melipeuco',12);
+insert into comuna (id, titulo, region_id) values	(261,'Nueva Imperial',12);
+insert into comuna (id, titulo, region_id) values	(262,'Padre Las Casas',12);
+insert into comuna (id, titulo, region_id) values	(263,'Perquenco',12);
+insert into comuna (id, titulo, region_id) values	(264,'Pitrufquén',12);
+insert into comuna (id, titulo, region_id) values	(265,'Pucón',12);
+insert into comuna (id, titulo, region_id) values	(266,'Saavedra',12);
+insert into comuna (id, titulo, region_id) values	(267,'Temuco',12);
+insert into comuna (id, titulo, region_id) values	(268,'Teodoro Schmidt',12);
+insert into comuna (id, titulo, region_id) values	(269,'Toltén',12);
+insert into comuna (id, titulo, region_id) values	(270,'Vilcún',12);
+insert into comuna (id, titulo, region_id) values	(271,'Villarrica',12);
+insert into comuna (id, titulo, region_id) values	(272,'Angol',12);
+insert into comuna (id, titulo, region_id) values	(273,'Collipulli',12);
+insert into comuna (id, titulo, region_id) values	(274,'Curacautín',12);
+insert into comuna (id, titulo, region_id) values	(275,'Ercilla',12);
+insert into comuna (id, titulo, region_id) values	(276,'Lonquimay',12);
+insert into comuna (id, titulo, region_id) values	(277,'Los Sauces',12);
+insert into comuna (id, titulo, region_id) values	(278,'Lumaco',12);
+insert into comuna (id, titulo, region_id) values	(279,'Purén',12);
+insert into comuna (id, titulo, region_id) values	(280,'Renaico',12);
+insert into comuna (id, titulo, region_id) values	(281,'Traiguén',12);
+insert into comuna (id, titulo, region_id) values	(282,'Victoria',12);
+insert into comuna (id, titulo, region_id) values	(283,'Corral',13);
+insert into comuna (id, titulo, region_id) values	(284,'Lanco',13);
+insert into comuna (id, titulo, region_id) values	(285,'Los Lagos',13);
+insert into comuna (id, titulo, region_id) values	(286,'Máfil',13);
+insert into comuna (id, titulo, region_id) values	(287,'Mariquina',13);
+insert into comuna (id, titulo, region_id) values	(288,'Paillaco',13);
+insert into comuna (id, titulo, region_id) values	(289,'Panguipulli',13);
+insert into comuna (id, titulo, region_id) values	(290,'Valdivia',13);
+insert into comuna (id, titulo, region_id) values	(291,'Futrono',13);
+insert into comuna (id, titulo, region_id) values	(292,'La Unión',13);
+insert into comuna (id, titulo, region_id) values	(293,'Lago Ranco',13);
+insert into comuna (id, titulo, region_id) values	(294,'Río Bueno',13);
+insert into comuna (id, titulo, region_id) values	(295,'Ancud',14);
+insert into comuna (id, titulo, region_id) values	(296,'Castro',14);
+insert into comuna (id, titulo, region_id) values	(297,'Chonchi',14);
+insert into comuna (id, titulo, region_id) values	(298,'Curaco de Vélez',14);
+insert into comuna (id, titulo, region_id) values	(299,'Dalcahue',14);
+insert into comuna (id, titulo, region_id) values	(300,'Puqueldón',14);
+insert into comuna (id, titulo, region_id) values	(301,'Queilén',14);
+insert into comuna (id, titulo, region_id) values	(302,'Quemchi',14);
+insert into comuna (id, titulo, region_id) values	(303,'Quellón',14);
+insert into comuna (id, titulo, region_id) values	(304,'Quinchao',14);
+insert into comuna (id, titulo, region_id) values	(305,'Calbuco',14);
+insert into comuna (id, titulo, region_id) values	(306,'Cochamó',14);
+insert into comuna (id, titulo, region_id) values	(307,'Fresia',14);
+insert into comuna (id, titulo, region_id) values	(308,'Frutillar',14);
+insert into comuna (id, titulo, region_id) values	(309,'Llanquihue',14);
+insert into comuna (id, titulo, region_id) values	(310,'Los Muermos',14);
+insert into comuna (id, titulo, region_id) values	(311,'Maullín',14);
+insert into comuna (id, titulo, region_id) values	(312,'Puerto Montt',14);
+insert into comuna (id, titulo, region_id) values	(313,'Puerto Varas',14);
+insert into comuna (id, titulo, region_id) values	(314,'Osorno',14);
+insert into comuna (id, titulo, region_id) values	(315,'Puero Octay',14);
+insert into comuna (id, titulo, region_id) values	(316,'Purranque',14);
+insert into comuna (id, titulo, region_id) values	(317,'Puyehue',14);
+insert into comuna (id, titulo, region_id) values	(318,'Río Negro',14);
+insert into comuna (id, titulo, region_id) values	(319,'San Juan de la Costa',14);
+insert into comuna (id, titulo, region_id) values	(320,'San Pablo',14);
+insert into comuna (id, titulo, region_id) values	(321,'Chaitén',14);
+insert into comuna (id, titulo, region_id) values	(322,'Futaleufú',14);
+insert into comuna (id, titulo, region_id) values	(323,'Hualaihué',14);
+insert into comuna (id, titulo, region_id) values	(324,'Palena',14);
+insert into comuna (id, titulo, region_id) values	(325,'Aisén',15);
+insert into comuna (id, titulo, region_id) values	(326,'Cisnes',15);
+insert into comuna (id, titulo, region_id) values	(327,'Guaitecas',15);
+insert into comuna (id, titulo, region_id) values	(328,'Cochrane',15);
+insert into comuna (id, titulo, region_id) values	(329,'O’higgins',15);
+insert into comuna (id, titulo, region_id) values	(330,'Tortel',15);
+insert into comuna (id, titulo, region_id) values	(331,'Coihaique',15);
+insert into comuna (id, titulo, region_id) values	(332,'Lago Verde',15);
+insert into comuna (id, titulo, region_id) values	(333,'Chile Chico',15);
+insert into comuna (id, titulo, region_id) values	(334,'Río Ibáñez',15);
+insert into comuna (id, titulo, region_id) values	(335,'Antártica',16);
+insert into comuna (id, titulo, region_id) values	(336,'Cabo de Hornos',16);
+insert into comuna (id, titulo, region_id) values	(337,'Laguna Blanca',16);
+insert into comuna (id, titulo, region_id) values	(338,'Punta Arenas',16);
+insert into comuna (id, titulo, region_id) values	(339,'Río Verde',16);
+insert into comuna (id, titulo, region_id) values	(340,'San Gregorio',16);
+insert into comuna (id, titulo, region_id) values	(341,'Porvenir',16);
+insert into comuna (id, titulo, region_id) values	(342,'Primavera',16);
+insert into comuna (id, titulo, region_id) values	(343,'Timaukel',16);
+insert into comuna (id, titulo, region_id) values	(344,'Natales',16);
+insert into comuna (id, titulo, region_id) values	(345,'Torres del Paine',16);
+insert into comuna (id, titulo, region_id) values	(346,'Cabildo',6);
+
+---------Estado Civil-----------
+INSERT INTO estado_civil (id, titulo) VALUES(1, 'Soltero/a');
+INSERT INTO estado_civil (id, titulo) VALUES(2, 'Casado/a');
+INSERT INTO estado_civil (id, titulo) VALUES(3, 'Viudo/a');
+INSERT INTO estado_civil (id, titulo) VALUES(4, 'Divorciado/a');
+INSERT INTO estado_civil (id, titulo) VALUES(5, 'Conviviente Civil');
+
+---------------Genero-----------------
+
+INSERT INTO genero (id, titulo) VALUES(0, 'Desconocido');
+INSERT INTO genero (id, titulo) VALUES(1, 'Masculino');
+INSERT INTO genero (id, titulo) VALUES(2, 'Femenino');
+INSERT INTO genero (id, titulo) VALUES(9, 'No Aplicable');
+
+commit;
+
+-------------Usuario--------------
+
+INSERT INTO usuario VALUES ('','María','González','Perez','24/03/82',25665487,65224517 ,'Las alondras #5966','',sysdate,'',0,15,2,'','','');
+INSERT INTO usuario VALUES ('','Luis','Díaz','Mena','06/07/91',59632545,56842202 ,'Las codornices #5935','',sysdate,'',0,55,1,'','','');
+INSERT INTO usuario VALUES ('','Carolina','López','Hurtado','23/02/88',49321215,85474144 ,'Missouri #5954','',sysdate,'',0,23,2,'','','');
+INSERT INTO usuario VALUES ('','Alberto','Cáceres','Tapia','07/03/70',39356115,22156987 ,'Cohipue #5988','',sysdate,'',0,22,1,'','','');
+INSERT INTO usuario VALUES ('','Andrés','Rivera','Monsalves','02/06/71',29563555,55214554 ,'Los Milanos #5987','',sysdate,'',0,34,1,'','','');
+
+commit;
+
+------------Tipo Documento------------
+insert into documento values (1,'Afp');
+insert into documento values (2,'Liquiación');
+insert into documento values (3,'Finiquito');
+insert into documento values (4,'Fonasa/Isapre');
+insert into documento values (5,'Pasaporte');
+
+
+
+-------------Dias--------------
+
+insert into dia values (0,'Domingo');
+insert into dia values (1,'Lunes');
+insert into dia values (2,'Martes');
+insert into dia values (3,'Miercoles');
+insert into dia values (4,'Jueves');
+insert into dia values (5,'Viernes');
+insert into dia values (6,'Sabado');
+
+commit;
+---------------Servicio-------------------
+insert into servicio values ('','Ortodoncia','ORTODONCIA','el tratamiento de dientes y maxilares',40000,'1','','','el tratamiento de dientes y maxilares que se estén ubicados incorrectamente','');
+insert into servicio values ('','Endodoncia','ENDODONCIA','Trata los conductos dentarios',25000,'1','','','Trata los conductos dentarios donde se aloja la pulpa dental','');
+insert into servicio values ('','Odontologia General','ODONTOLOGIA GENERAL','operatoria dental',35000,'1','','','se ocupa de la restauración del tejido afectado por caries, fracturas o desgastes','');
+insert into servicio values ('','Blanqueamiento dental','BLANQUEAMIENTO DENTAL','permite modificar el color de los dientes',35000,'1','','','modificar el color de los dientes, principalmente aquellos de tonos oscuros.','');
+insert into servicio values ('','Implantología','IMPLANTOLOGÍA','apoya la rehabilitación dental',15000,'1','','','reemplazar la raíz de uno o más dientes, lo cual permite restituir la corona dental','');
+
+commit;
+--lunes
+--servicio 1
+insert into modulo values('','08:00','09:00',3,1,1,1,1);
+insert into modulo values('','10:00','11:00',4,1,1,1,1);
+insert into modulo values('','12:00','13:00',3,1,1,1,1);
+insert into modulo values('','14:00','15:00',3,1,1,1,1);
+insert into modulo values('','16:00','17:00',4,1,1,1,1);
+
+--servicio 2
+
+insert into modulo values('','08:00','09:00',3,1,1,2,2);
+insert into modulo values('','10:00','11:00',4,1,1,2,2);
+insert into modulo values('','12:00','13:00',3,1,1,2,2);
+insert into modulo values('','14:00','15:00',3,1,1,2,2);
+insert into modulo values('','16:00','17:00',4,1,1,2,2);
+
+--servicio 3
+
+insert into modulo values('','08:00','09:00',3,1,1,3,3);
+insert into modulo values('','10:00','11:00',4,1,1,3,3);
+insert into modulo values('','12:00','13:00',3,1,1,3,3);
+insert into modulo values('','14:00','15:00',3,1,1,3,3);
+insert into modulo values('','16:00','17:00',4,1,1,3,3);
+
+---------------------------------------------------------------------------------------
+--martes
+insert into modulo values('','08:00','09:00',3,1,2,4,4);
+insert into modulo values('','10:00','11:00',4,1,2,4,4);
+insert into modulo values('','12:00','13:00',3,1,2,4,4);
+insert into modulo values('','14:00','15:00',3,1,2,4,4);
+insert into modulo values('','16:00','17:00',4,1,2,4,4);
+
+
+--miercoles
+insert into modulo values('','08:00','09:00',3,1,3,5,5);
+insert into modulo values('','10:00','11:00',4,1,3,5,5);
+insert into modulo values('','12:00','13:00',3,1,3,5,5);
+insert into modulo values('','14:00','15:00',3,1,3,5,5);
+insert into modulo values('','16:00','17:00',4,1,3,5,5);
+
+
+
+--jueves
+insert into modulo values('','08:00','09:00',3,1,4,1,1);
+insert into modulo values('','10:00','11:00',4,1,4,2,2);
+insert into modulo values('','12:00','13:00',3,1,4,3,3);
+insert into modulo values('','14:00','15:00',3,1,4,4,4);
+insert into modulo values('','16:00','17:00',4,1,4,5,5);
+
+commit;
+
+
+
+create table registro_error(id number primary key,
+                            mensaje varchar2 (45) not null,
+                            descripcion varchar2(100) not null,
+                            codigo number not null,
+                            fecha date not null);

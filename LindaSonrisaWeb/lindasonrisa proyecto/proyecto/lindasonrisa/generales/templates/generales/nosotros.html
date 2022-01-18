@@ -1,0 +1,160 @@
+{% extends 'base/base.html' %}
+{% load static %}
+{% block titulo %}
+    Linda Sonrisa - Nosotros
+{% endblock %}
+
+{% block content %}
+
+    <div class="hero-wrap hero-bread" style="background-image: url('../static/base/images/about.jpg');">
+
+        <div class="container">
+            <div class="row no-gutters slider-text align-items-center justify-content-center">
+                <div class="col-md-9 ftco-animate text-center">
+                    <!--<p class="breadcrumbs"><span class="mr-2"><a href="{% url 'generales:home' %}">Volver a Inicio</a></span></p>-->
+                    <h1 id="title_nosotros" class="mb-0 bread">Sobre nosotros</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section class="ftco-section ftco-no-pb ftco-no-pt">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-7 py-5 wrap-about pb-md-5 ftco-animate">
+                    <div class="heading-section-bold mb-4 mt-md-5">
+                        <div class="ml-md-0">
+                            <h5 class="mb-4" style="text-transform: uppercase;">Bienvenido a Linda Sonrisa</h5>
+                            <h2 class="mb-4">Servicios flexibles a tus necesidades</h2>
+                        </div>
+                    </div>
+                    <div class="pb-md-5">
+                        <p>Somos una clínica creada y administrada por sus dueños, dentistas de la Pontificia
+                            Universidad Católica.
+                        </p>
+                        <p><a href="{% url 'generales:servicios' %}" class="btn btn-primary">Ver servicios</a></p>
+                    </div>
+                </div>
+                <div class="col-md-5 p-md-5 img img-2 d-flex justify-content-center align-items-center">
+                    <iframe width="560" height="400" src="https://www.youtube.com/embed/GioatGSDhNk"
+                            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+    </section><br>
+    <h1 id="title_especialistas" class="display-3" style="font-size:7vw;">Nuestros especialistas</h1>
+    <div class="container" id="foo"><br>
+        <div class="row">
+            <div class="col-sm"></div>
+            <div class="col-sm">
+                <h4>María González</h4>Especialista en higiene dental, egresada de la Pontificia Universidad Católica de
+                Chile
+                con excelentes resultados y con más de 15 años de experiencia en el rubro de odontología, decidió unirse
+                al equipo Odontológico de Linda Sonrisa para brindar un servicio de calidad a sus clientes.
+            </div>
+            <div class="col-sm"><img alt="medico1" class="rounded-circle" id="nosotros_medico"
+                                     src="{% static 'base/images/medicos/medico1.jpg' %}"></div>
+        </div>
+        <hr>
+        <div class="row">
+            <div class="col-sm"><img alt="medico2" class="rounded-circle" id="nosotros_medico"
+                                     src="{% static 'base/images/medicos/medico2.jpg' %}"></div>
+            <div class="col-sm">
+                <h4>Luis Díaz</h4>Especialista en higiene dental, egresado de la Universidad de Chile con un gran
+                resultado en
+                su tésis de titulación y por el excelente rendimiento en Odontologías anteriores, cuenta con más de 10
+                años de experiencia
+                en el rubro de Odontología busca ayudar y ofrecer un excelente servicio.
+            </div>
+            <div class="col-sm"></div>
+        </div>
+        <hr>
+        <div class="row">
+            <div class="col-sm"></div>
+            <div class="col-sm">
+                <h4>Carolina López</h4>Especialista en cirujía bucal y egresada de la Universidad de Santiago de Chile
+                con más de 17 años
+                de experiencia le permite dar un servicio de alta calidad y trabajos con su mayor porcentaje de
+                satisfacción por la
+                parte de los clientes.
+            </div>
+            <div class="col-sm"><img alt="medico3" class="rounded-circle" id="nosotros_medico"
+                                     src="{% static 'base/images/medicos/medico3.jpg' %}"></div>
+        </div>
+        <hr>
+        <div class="row">
+            <div class="col-sm"><img alt="medico4" class="rounded-circle" id="nosotros_medico"
+                                     src="{% static 'base/images/medicos/medico4.jpg' %}"></div>
+            <div class="col-sm">
+                <h4>Alberto Cáceres</h4>Especialista en cirujía bucal e higienista egresado de la Universidad de Chile,
+                cuenta con más de
+                13 años de experiencia en la profesión y gracias con su gran compromiso en la labor, logra dar altas
+                expectativas a los clientes
+                y lograr un excelente resultado.
+            </div>
+            <div class="col-sm"></div>
+        </div>
+        <hr>
+        <div class="row">
+            <div class="col-sm"></div>
+            <div class="col-sm">
+                <h4>Andrés Rivera</h4>Especialista Ortodoncista y cirujano bucal egresado de la Universidad de Santiago
+                de Chile con más de 21
+                años de experiencia, le permite ser el integrante del equipo Odontológico más experimentado y por ende,
+                uno de los mejores
+                Ortodoncistas de Santiago.
+            </div>
+            <div class="col-sm"><img alt="medico5" class="rounded-circle" id="nosotros_medico"
+                                     src="{% static 'base/images/medicos/medico5.jpg' %}"></div>
+        </div>
+        <br>
+    </div>
+    <br>
+
+
+    <section class="ftco-section ftco-counter img" id="section-counter"
+             style="background-image: url(../static/base/images/bg_3.jpg);">
+        <div class="container">
+            <div class="row justify-content-center py-5">
+                <div class="col-md-10">
+                    <div class="row">
+                        <div class="col-md-3 d-flex justify-content-center counter-wrap ftco-animate">
+                            <div class="block-18 text-center">
+                                <div class="text">
+                                    <strong class="number" data-number="{{ clientes }}">0</strong>
+                                    <span>Clientes satisfechos</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 d-flex justify-content-center counter-wrap ftco-animate">
+                            <div class="block-18 text-center">
+                                <div class="text">
+                                    <strong class="number" data-number="{{ servicios }}">0</strong>
+                                    <span>Servicios</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 d-flex justify-content-center counter-wrap ftco-animate">
+                            <div class="block-18 text-center">
+                                <div class="text">
+                                    <strong class="number" data-number="{{ proveedores }}">0</strong>
+                                    <span>Proveedores</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 d-flex justify-content-center counter-wrap ftco-animate">
+                            <div class="block-18 text-center">
+                                <div class="text">
+                                    <strong class="number" data-number="5">0</strong>
+                                    <span>Médicos</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+{% endblock %}

@@ -1,0 +1,103 @@
+{% extends 'base/base.html' %}
+{% load static %}
+{% block titulo %}
+    Linda Sonrisa - Home
+{% endblock %}
+
+{% block content %}
+    <div class="video_banner">
+        <video id="video" autoplay loop muted>
+            <source src="{% static 'base/images/Comercial.mp4' %}">
+        </video>
+    </div>
+    <section class="ftco-section">
+        <div class="container">
+            <div class="row no-gutters ftco-services">
+                <div class="col-md-3 text-center d-flex align-self-stretch ftco-animate">
+                    <div class="media block-6 services mb-md-0 mb-4">
+                        <div class="icon bg-color-0 active d-flex justify-content-center align-items-center mb-2">
+                            <img alt="digital" id="iconos" src="{% static 'base/images/iconos/digital.png' %}">
+                        </div>
+                        <div class="media-body">
+                            <h3 class="heading">Digitalizado</h3>
+                            <span>Para tu comodidad</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 text-center d-flex align-self-stretch ftco-animate">
+                    <div class="media block-6 services mb-md-0 mb-4">
+                        <div class="icon bg-color-0 d-flex justify-content-center align-items-center mb-2">
+                            <img alt="icono" id="iconos" src="{% static 'base/images/iconos/tirantes.png' %}">
+                        </div>
+                        <div class="media-body">
+                            <h3 class="heading">Linda Sonrisa</h3>
+                            <span>A un precio justo</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 text-center d-flex align-self-stretch ftco-animate">
+                    <div class="media block-6 services mb-md-0 mb-4">
+                        <div class="icon bg-color-0 d-flex justify-content-center align-items-center mb-2">
+                            <img alt="icono" id="iconos" src="{% static 'base/images/iconos/estudios.png' %}">
+                        </div>
+                        <div class="media-body">
+                            <h3 class="heading">Profesionales</h3>
+                            <span>Capacitados en las mejores Universidades</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 text-center d-flex align-self-stretch ftco-animate">
+                    <div class="media block-6 services mb-md-0 mb-4">
+                        <div class="icon bg-color-0 d-flex justify-content-center align-items-center mb-2">
+                            <img alt="icono" id="iconos" src="{% static 'base/images/iconos/herramientas.png' %}">
+                        </div>
+                        <div class="media-body">
+                            <h3 class="heading">Calidad</h3>
+                            <span>En todas las herramientas</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="ftco-section ftco-no-pt ftco-no-pb py-5 bg-light">
+        <div class="container py-4">
+            <div class="row d-flex justify-content-center py-5">
+                <div class="col-md-6">
+                    <h2 style="font-size: 22px;" class="mb-0">Suscríbase a nuestro boletín</h2>
+                    <span>Reciba notificaciones por correo electrónico sobre nuestras últimas promociones.</span>
+                </div>
+                <div class="col-md-6 d-flex align-items-center">
+                    <form method="POST" class="subscribe-form" data-url="/">
+                        {% csrf_token %}
+                        <div class="form-group d-flex">
+                            <input type="text" class="form-control" placeholder="Su correo electrónico"
+                                   id="correoBoletin"
+                                   name="boletin">
+                            <input type="text" class="form-control" placeholder="Su nombre" id="nombreBoletin"
+                                   name="nombre">
+                            <input type="submit" value="Subscribir" id="btnSuscribir" class="submit px-3"
+                                   onclick="validarBoletin()">
+                        </div>
+
+                        <div id="loading-screen" style="display:none;">
+                            <!-- div para cargar un loader -->
+                            <div id="load-screen-2" class="form-group d-flex">
+                                <img alt="carga-home" src="{% static 'base/images/load_home.gif' %}">
+                                <p id="msgEnviando"> Enviando suscripción..</p>
+                            </div>
+
+                        </div>
+                        <div id="msg" style="display:none;"></div>
+                    </form>
+                </div>
+                <div class="alert alert-danger" role="alert" id="alertBoletin">
+                    <p id ="c_valido">Por favor escriba el correo válido.<p>
+                    <p id="c_existente">Correo ya existente.</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+{% endblock %}

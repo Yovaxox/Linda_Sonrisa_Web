@@ -1,0 +1,56 @@
+mailchimp
+
+correo: javier.paredes@outlook.com
+usuario: Yovax
+password: P******_123
+
+-----------
+
+test linda sonrisa
+
+gmail: testlindasonrisa@gmail.com
+pass: lindasonrisa123
+
+--------------
+
+fastcomet
+
+mail: javier.paredes@outlook.com
+pass: javier_123
+
+--------------
+
+django admin
+
+user: admin
+pass: lindasonrisa_123
+
+----
+usuario test
+
+user:javier
+pass:usuario_1
+
+....
+
+AWS
+
+cuenta duoc, Idedcapused_123
+
+pass db: lindasonrisa
+
+
+---------
+
+aws database nueva 
+
+user: admin
+
+pass: lindasonrisa
+
+----------
+
+lindasonrisa admin
+
+user: admin
+pass: lindasonrisa123

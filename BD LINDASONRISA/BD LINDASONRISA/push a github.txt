@@ -1,0 +1,13 @@
+1.- Se dirige a la carpeta en especifica donde quiere realizar el push
+
+2.- Inicializa git con el comando: git init
+
+3.- Selecciona todo el contenido de la carpeta maestra con: git add .
+
+4.- Se puede observar qué cosas estan incluidas para el commit a realizar con: git status
+
+5.- Se realiza el commit correspondiente con: git commit -m "mensaje"
+
+6.- Se conecta al repositorio de github mediante lo siguiente: git remote add origin "url"
+
+7.- Se hace el push con: git push -u origin master

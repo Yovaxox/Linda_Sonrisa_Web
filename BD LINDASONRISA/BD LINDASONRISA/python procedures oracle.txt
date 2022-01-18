@@ -1,0 +1,31 @@
+user = User.objects.get(username=request.user.username)
+        print(str(user))
+        ## CONEXION ##
+        d_cursor = connection.cursor() # se crea la variable d_cursor y le pasa como valor la conexión a la base de datos para que pueda realizar QUERYS
+        cursor = d_cursor.connection.cursor() # crea la variable cursor donde le indico el valor de la conexion más la propiedad .connection.cursor()
+        out_args = cursor.var(cx_Oracle.CURSOR) # se crea la variable out_args que le paso como valor el TIPO DE DATO cursor, es decir, cursor es un arrayList[]
+        result = cursor.callproc("sp_usuario", [str(user),out_args])[1] # en la variable result le pasamos el valor de cursor donde le agregamos la propiedad callproc() para llamar a un procedimiento almacenado de la BD  \
+        # Además, dentro del paréntesis van estos parámetros ("NOMBRE DEL PROCEDURE", [LOS PARAMETROS IN, OUT])[I] // DONDE [I] ES UN INDICE O INDEX
+        l_regiones = [] # VARIABLE TIPO LISTA
+        for line in result: # INICIAR UN LOOP / FOR / FOREACH
+            l_regiones.append(line)
+            pass
+        print(l_regiones)
+        ########
+
+
+
+
+
+## CONEXION ##
+        d_cursor = connection.cursor()
+        cursor = d_cursor.connection.cursor()
+        out_args = cursor.var(cx_Oracle.CURSOR)
+        result = cursor.callproc("sp_region", [out_args])[0]
+        #print(result.fetchall())
+        l_regiones = []
+        for line in result:
+            l_regiones.append({"id": line})
+            pass
+        print(l_regiones)
+        ########

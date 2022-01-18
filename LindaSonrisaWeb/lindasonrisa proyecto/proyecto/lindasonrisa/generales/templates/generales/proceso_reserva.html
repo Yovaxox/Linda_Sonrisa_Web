@@ -1,0 +1,227 @@
+{% load static %}
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <title>Linda Sonrisa</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1 maximum-scale=1 minimum-scale=1"/>
+    <link rel="shortcut icon" href="{% static 'base/images/favicon.ico' %}" type="image/x-icon">
+    <link rel="icon" href="{% static 'base/images/favicon.ico' %}" type="image/x-icon">
+
+    <script src="https://code.jquery.com/jquery-3.0.0.js"></script>
+
+    <link rel="stylesheet" href="{% static 'base/js/jqwidgets/styles/jqx.base.css' %}" type="text/css"/>
+    <link rel="stylesheet" href="{% static 'base/css/open-iconic-bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'base/css/animate.css' %}">
+    <link rel="stylesheet" href="{% static 'base/css/owl.theme.default.min.css' %}">
+    <link rel="stylesheet" href="{% static 'base/css/magnific-popup.css' %}">
+    <link rel="stylesheet" href="{% static 'base/css/aos.css' %}">
+    <link rel="stylesheet" href="{% static 'base/css/owl.carousel.min.css' %}">
+    <link rel="stylesheet" href="{% static 'base/css/ionicons.min.css' %}">
+    <link rel="stylesheet" href="{% static 'base/css/bootstrap-datepicker.css' %}">
+    <link rel="stylesheet" href="{% static 'base/css/jquery.timepicker.css' %}">
+    <link rel="stylesheet" href="{% static 'base/css/flaticon.css' %}">
+    <link rel="stylesheet" href="{% static 'base/css/icomoon.css' %}">
+    <link rel="stylesheet" href="{% static 'base/css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'base/js/jqwidgets/styles/jqx.base.css' %}" type="text/css"/>
+    <link rel="stylesheet" href="{% static 'base/css/propio.css' %}">
+    <link href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.0.3/css/font-awesome.css'>
+    <link rel="stylesheet" href="{% static 'base/reserva/reserva.css' %}">
+    ,
+    <link rel="stylesheet" href="{% static 'base/js/jqwidgets/styles/jqx.darkblue.css' %}" type="text/css"/>
+    <link rel="stylesheet" href="{% static 'base/js/jqwidgets/styles/jqx.material.css' %}" type="text/css"/>
+</head>
+
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
+    <div class="container">
+        <a href="{% url 'generales:home' %}"><img alt="logo" id="logo"
+                                                  src="{% static 'base/images/logo.jpg' %}"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav"
+                aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation" id="text-nav">
+            <span class="oi oi-menu" id="text-nav"></span> Menú
+        </button>
+
+        <div class="collapse navbar-collapse" id="ftco-nav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item" id="hovermenu"><a href="{% url 'generales:home' %}" class="nav-link">Inicio</a>
+                </li>
+                <li class="nav-item" id="hovermenu"><a href="{% url 'generales:nosotros' %}"
+                                                       class="nav-link">Nosotros</a></li>
+                <li class="nav-item" id="hovermenu"><a href="{% url 'generales:convenios' %}"
+                                                       class="nav-link">Convenios & Promociones</a></li>
+                <li class="nav-item" id="hovermenu"><a href="{% url 'generales:contacto' %}"
+                                                       class="nav-link">Contacto</a></li>
+                <li class="nav-item" id="hovermenu"><a href="{% url 'generales:servicios' %}"
+                                                       class="nav-link">Servicios</a></li>
+                <li class="nav-item" id="hovermenu"><a href="{% url 'generales:proceso_reserva' %}"
+                                                       class="nav-link">Reserva</a></li>
+                <li class="nav-item" id="hovermenu"><a href="{% url 'perfil:perfil' %}"
+                                                       class="nav-link">
+                    {% if user.is_authenticated %}
+                        ¡Bienvenido {{ user.usuario.nombre }}!
+                    {% else %}
+                        Iniciar sesión
+                        </a></li>
+                    {% endif %}
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<div class="hero-wrap hero-bread" id="bannerReserva"
+     style="background-image: url('../static/base/images/banner_reserva.jpg');">
+    <div class="container">
+        <div class="row no-gutters slider-text align-items-center justify-content-center">
+            <div class="col-md-9 ftco-animate text-center">
+            </div>
+            <h1 class="mb-0 bread" id="titulo_reserva">Reserva tu hora</h1>
+        </div>
+    </div>
+</div>
+<br>
+
+<div class="container" id="contenedor_reserva">
+    <form class="form" method="POST" id="formReserva">
+        {% csrf_token %}
+        <div class="row">
+            <div class="col"><p><img class="izquierda" src="{% static 'base/images/uno.png' %}">Seleccione un servicio
+            </p>
+                <div id='cbxServicio' name="servicio"></div>
+            </div>
+            <div class="col"><p><img class="izquierda" src="{% static 'base/images/tres.png' %}">Eliga un día para
+                reservar
+                hora</p>
+                <div id='calendario' name="fecha">
+                </div>
+                <input type="text" name="dia" id="dia">
+                <input type="text" name="diaNombre" id="diaNombre">
+                <p id="noDisponible">No existen horas en esta fecha. Por favor seleccione otra fecha.</p>
+                </div>
+                <p id="p_fecha"></p>
+
+            <div class="w-100"></div>
+            <div class="col"><p><img class="izquierda" src="{% static 'base/images/dos.png' %}">Seleccione un médico</p>
+                <div id='cbxMedicos' name="medico"></div>
+            </div>
+            <div class="col"><p><img class="izquierda" src="{% static 'base/images/cuatro.png' %}">Seleccione una hora
+            </p>
+                <div id='cbxHorarios' name="horarios"></div>
+            </div>
+        </div>
+        <br>
+        <input type="submit" value="Reservar hora" class="btn btn-primary" id="submitReserva" onclick="validarReserva();">
+        <br>
+        <br>
+        <div class="alert alert-danger" role="alert" id="alertReserva">
+            Por favor, todos los datos son obligatorios.
+            <p id="p_servicio">- Error al seleccionar servicio.</p>
+            <p id="p_medico">- Error al seleccionar médico.</p>
+            <p id="p_fecha">- Error al seleccionar día.</p>
+            <p id="p_horario">- Error al seleccionar horario.</p>
+        </div>
+    </form>
+</div>
+
+
+<footer class="ftco-footer ftco-section">
+
+    <div class="container" id="footer" style="display:block;">
+        <div class="row">
+            <div class="mouse">
+                <a href="#" class="mouse-icon" id="footer" style="display:block;">
+                    <div class="mouse-wheel"><span class="ion-ios-arrow-up"></span></div>
+                </a>
+            </div>
+        </div>
+        <div class="row mb-5">
+            <div class="col-md">
+                <div class="ftco-footer-widget mb-4">
+                    <h2 class="ftco-heading-2">Linda Sonrisa</h2>
+                    <p>¡Encuéntranos en nuestras redes sociales!</p>
+                    <ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-5">
+                        <li class="ftco-animate"><a href="#"><span class="icon-twitter"></span></a></li>
+                        <li class="ftco-animate"><a href="#"><span class="icon-facebook"></span></a></li>
+                        <li class="ftco-animate"><a href="#"><span class="icon-instagram"></span></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md">
+                <div class="ftco-footer-widget mb-4">
+                    <h2 class="ftco-heading-2">¿Tienes alguna pregunta?</h2>
+                    <div class="block-23 mb-3">
+                        <ul>
+                            <li><a href="https://g.page/OdontologiaCordilleraPuente?share" target="_blank"><span
+                                    class="icon icon-map-marker"></span><span class="text">Av. Concha Y Toro
+                                            2279, Puente Alto, Región Metropolitana</span></a>
+                            </li>
+                            <li><a href="tel://600 500 4582"><span class="icon icon-phone"></span><span
+                                    class="text">600 500 4582</span></a></li>
+                            <li><a href="mailto:info@lindasonrisa.cl"><span class="icon icon-envelope"></span><span
+                                    class="text">info@lindasonrisa.cl</span></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12 text-center">
+
+                <p>
+                    <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                    Copyright &copy;
+                    <script>document.write(new Date().getFullYear());</script>
+                    | Linda Sonrisa
+                    <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<div class="loader-page"><br><br><br>Por favor, espere mientras cargamos los datos...</div>
+</body>
+<script>
+    function esconder() {
+        $('.mouse').css({
+            'display': 'none'
+        });
+    }
+
+    window.onload = function () {
+        esconder();
+    };
+</script>
+
+<script type="text/javascript" src="{% static 'base/reserva/reserva.js' %}"></script>
+<script type="text/javascript" src="{% static 'base/js/scripts/jquery-1.11.1.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'base/js/jqwidgets/jqxcore.js' %}"></script>
+<script type="text/javascript" src="{% static 'base/js/jqwidgets/jqxbuttons.js' %}"></script>
+<script type="text/javascript" src="{% static 'base/js/jqwidgets/jqxscrollbar.js' %}"></script>
+<script type="text/javascript" src="{% static 'base/js/jqwidgets/jqxlistbox.js' %}"></script>
+<script type="text/javascript" src="{% static 'base/js/jqwidgets/jqxcombobox.js' %}"></script>
+<script type="text/javascript" src="{% static 'base/js/jqwidgets/jqxdatetimeinput.js' %}"></script>
+<script type="text/javascript" src="{% static 'base/js/jqwidgets/jqxcalendar.js' %}"></script>
+<script type="text/javascript" src="{% static 'base/js/jqwidgets/jqxtooltip.js' %}"></script>
+<script type="text/javascript" src="{% static 'base/js/owl.carousel.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'base/js/jquery.waypoints.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'base/js/jquery.magnific-popup.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'base/js/jqwidgets/globalization/globalize.js' %}"></script>
+<script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/globalize/0.1.1/cultures/globalize.culture.es-ES.js"></script>
+<script type="text/javascript" src="{% static 'base/js/jqwidgets/globalization/globalize.js' %}"></script>
+
+<script src="{% static 'base/js/jquery.stellar.min.js' %}"></script>
+<script src="{% static 'base/js/aos.js' %}"></script>
+<script src="{% static 'base/js/jquery.animateNumber.min.js' %}"></script>
+<script src="{% static 'base/js/bootstrap-datepicker.js' %}"></script>
+<script src="{% static 'base/js/scrollax.min.js' %}"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+
+
+</html>

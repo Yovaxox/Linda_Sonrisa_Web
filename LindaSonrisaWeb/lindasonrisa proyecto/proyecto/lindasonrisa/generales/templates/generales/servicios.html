@@ -1,0 +1,67 @@
+{% extends 'base/base.html' %}
+{% load static %}
+{% block titulo %}
+    Linda Sonrisa - Servicios
+{% endblock %}
+
+{% block content %}
+
+    <div class="hero-wrap hero-bread" style="background-image: url('../static/base/images/servicios.jpg');">
+        <div class="container">
+            <div class="row no-gutters slider-text align-items-center justify-content-center">
+                <div class="col-md-9 ftco-animate text-center">
+                    <br><br><br><br>
+                    <!--<p class="breadcrumbs"><span class="mr-2"><a href="{% url 'generales:home' %}">Volver a Inicio</a></span></p>-->
+                    <h1 class="mb-0 bread" id="title_servicios">Nuestros servicios</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+    <section class="ftco-section ftco-degree-bg">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 ftco-animate">
+                    <div class="row">
+                        {% for s in object_list %}
+                            <!-- bloque servicio -->
+                            <div class="col-md-12 d-flex ftco-animate">
+                                <div class="blog-entry align-self-stretch d-md-flex">
+                                    <div class="block-20">
+                                        <img id="img_servicio"
+                                             src="https://drive.google.com/thumbnail?id={{ s.file_id }}">
+                                    </div>
+                                    <div class="text d-block pl-md-4">
+                                        <h3 class="heading">{{ s.titulo }}</h3>
+                                        <p id="p_servicio">{{ s.descripcion }}</p>
+                                        <h5>Precio total: ${{ s.precio }}</h5>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- fin bloque servicio -->
+                        {% endfor %}
+                        <div class="pagination">
+                        <span class="step-links">
+                            {% if page_obj.has_previous %}
+                                <a href="?page=1">&laquo; Primero |</a>
+                                <a href="?page={{ page_obj.previous_page_number }}"> Anterior</a>
+                            {% endif %}
+
+                            <span class="current">
+                                Página {{ page_obj.number }} de {{ page_obj.paginator.num_pages }}.
+                            </span>
+
+                            {% if page_obj.has_next %}
+                                <a href="?page={{ page_obj.next_page_number }}">Siguiente</a>
+                                <a href="?page={{ page_obj.paginator.num_pages }}">Último &raquo;</a>
+                            {% endif %}
+                        </span>
+                        </div>
+                    </div>
+                </div> <!-- .col-md-8 -->
+            </div>
+        </div>
+    </section> <!-- .section -->
+
+
+
+{% endblock %}

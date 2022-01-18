@@ -1,0 +1,30 @@
+{% extends 'base/base.html' %}
+{% load static %}
+{% block titulo %}
+    Linda Sonrisa - Reserva Finalizada
+{% endblock %}
+
+{% block content %}
+    <div class="container">
+        <div class="alert alert-success" role="alert">
+            <h4 class="alert-heading">¡Reserva realizada!</h4>
+            <p>Una vez realizada la reserva, puedes visualizar en tu perfil, en el módulo "Mis reservas" el contenido de
+                las reservas solicitadas.
+                Puedes ir directamente a tu perfil <a href="{% url 'perfil:perfil' %}" class="alert-link">aquí</a></p>
+            <hr>
+            <p class="mb-0">También puedes solicitar una nueva reserva haciendo click <a
+                    href="{% url 'generales:proceso_reserva' %}" class="alert-link">acá</a></p>
+        </div>
+    </div>
+    <script>
+    function esconder() {
+        $('.mouse').css({
+            'display': 'none'
+        });
+    }
+
+    window.onload = function () {
+        esconder();
+    };
+</script>
+{% endblock %}

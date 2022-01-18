@@ -1,0 +1,202 @@
+#logo {
+    width: 100px;
+    height: 100px;
+    margin-right: 50px;
+}
+
+#navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light {
+    background-color: white;
+}
+
+#p_servicio {
+    text-align: justify;
+}
+
+#foto_medico {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+#nosotros_medico {
+    width: auto;
+    height: auto;
+}
+
+#foo {
+    outline: 1px solid rgb(65, 171, 173);
+
+}
+
+#title_especialistas {
+    text-align: center;
+    color: rgb(65, 171, 173);
+}
+
+#title_contactanos {
+    text-shadow: 0 0 5px rgb(0, 0, 0);
+}
+
+.list-group-item.active {
+    z-index: 2;
+    color: #fff;
+    background-color: rgb(65, 171, 173) !important;
+    border-color: rgb(65, 171, 173) !important;
+}
+
+#title_nosotros {
+    text-shadow: 0 0 5px rgb(0, 0, 0);
+}
+
+#title_servicios {
+    text-shadow: 0 0 5px rgb(0, 0, 0);
+}
+
+#iconos {
+    width: 50%;
+    height: 50%;
+}
+
+.col-sm {
+    text-align: justify;
+}
+
+#box_contactanos {
+    outline: 1px solid rgb(65, 171, 173);
+}
+
+#ftco-navbar {
+    background-color: white !important;
+}
+
+#text-nav {
+    color: black !important;
+}
+
+.nav-link {
+    color: black !important;
+}
+
+#img_servicio {
+    border-radius: 50%;
+    width: 100%;
+}
+
+#hovermenu {
+    background-color: white;
+    color: black;
+    font-size: 16px;
+    transition: 0.3s;
+    border-radius: 3%;
+}
+
+#hovermenu:hover {
+    background-color: rgb(65, 171, 173);
+    color: white;
+}
+
+.video_banner {
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    opacity: 80%;
+}
+
+#video {
+    width: 100%;
+    height: auto;
+}
+
+#card_convenio {
+    outline: 2px solid rgb(65, 171, 173);
+}
+
+#container_login {
+    margin-top: 80px;
+    color: white;
+}
+
+#links_login {
+    color: white;
+}
+
+#links_login:hover {
+    background-color: rgb(65, 171, 173);
+    opacity: 80%;
+    color: white;
+    border-radius: 5px;
+}
+
+.fondo {
+    background-image: url("../images/login-background.jpg"); /* The image used */
+    background-color: #cccccc; /* Used if the image is unavailable */
+    width: 100%;
+    height: auto;
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: cover; /* Resize the background image to cover the entire container */
+}
+
+#recordatorio {
+    color: rgba(245, 245, 245, 0.63) !important;
+}
+
+#modalRecuperar {
+    color: black;
+}
+
+#botonEntrar:hover {
+    background-color: rgb(65, 171, 173) !important;
+    color: white !important;
+}
+
+#calendar {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+#alertNombre, #alertCorreo, #alertAsunto, #alertMensaje {
+    display: none;
+}
+
+#background_contactanos {
+    background-image: url(../images/fondo_contactanos.jpg) !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
+}
+
+#alertRut, #alertPassword, #alertRecuperarCorreo, #alertBoletin {
+    display: none;
+}
+
+.hover12 figure {
+    background: rgb(117, 173, 175);
+}
+
+.hover12 figure img {
+    opacity: 1;
+    -webkit-transition: .3s ease-in-out;
+    transition: .3s ease-in-out;
+}
+
+.hover12 figure:hover img {
+    opacity: .5;
+}
+
+#correoBoletin, #nombreBoletin {
+    border-color: black;
+    border-radius: 0px !important;
+}
+
+#msgEnviando, #loading-screen, #load-screen-2 {
+    background-color: #f7f6f2;
+}
+
+#c_existente, #c_valido, #alertBoletin{
+    display: none;
+}

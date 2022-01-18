@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="TerminalProjectOptionsProvider">
+    <envs>
+      <env key="entvirt" value="C:\Users\Javier\Desktop\lindasonrisa proyecto\entvirt\Scripts\activate.bat" />
+    </envs>
+    <option name="myStartingDirectory" value="C:\Users\Javier\Desktop\lindasonrisa proyecto\proyecto\lindasonrisa" />
+  </component>
+</project>
